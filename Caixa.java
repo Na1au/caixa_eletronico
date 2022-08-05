@@ -10,9 +10,7 @@ class Main {
         block = 1;
 
         while (block != 0) { // permite a repetição do código
-            System.out
-                    .println("=============== Seja bem-vindo ================\nDigite seu CPF, com pontos e traços: "); // janela
-                                                                                                                        // inicial
+            System.out.println("=============== Seja bem-vindo ================\nDigite seu CPF, com pontos e traços: "); // janela inicial
             CPF = input.next();
             // colhe informação do CPF
 
@@ -40,10 +38,8 @@ class Main {
             escolha = 1;
             // se senha verdadeira, vai para o menu de operações
 
-            while (escolha != 0) { // enquanto o usuário não escolhe sair, continua exibindo o menu e realizando
-                                   // operações
-                System.out.println(
-                        "\n============ Escolha uma operação: ============ \n1: Saldo \n2: Depósito \n3: Saque \n0: Sair");
+            while (escolha != 0) { // enquanto o usuário não escolhe sair, continua exibindo o menu e realizando operações
+                System.out.println("\n============ Escolha uma operação: ============ \n1: Saldo \n2: Depósito \n3: Saque \n0: Sair");
                 escolha = input.nextInt();
                 while (escolha < 0 || escolha > 3) {
                     System.out.println("==== Por favor, digite uma operação válida ====");
@@ -56,8 +52,7 @@ class Main {
                         break;
                     // operação mostra o saldo
                     case 2:
-                        System.out.println(
-                                "\n================= DEPÓSITO ====================\nPor favor, insira o valor do depósito: ");
+                        System.out.println("\n================= DEPÓSITO ====================\nPor favor, insira o valor do depósito: ");
                         deposito = input.nextDouble();
                         if (deposito > 0) {
                             saldo += deposito;
@@ -68,8 +63,7 @@ class Main {
                         } // se valor é negativo, printa mensagem de erro
                         break;
                     case 3:
-                        System.out.println(
-                                "\n=================== SAQUE =====================\nPor favor, insira o valor do saque: ");
+                        System.out.println("\n=================== SAQUE =====================\nPor favor, insira o valor do saque: ");
                         saque = input.nextDouble();
                         if (saque <= saldo && saque > 0) {
                             saldo -= saque;
